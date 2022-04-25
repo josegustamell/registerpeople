@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static '/css/list.css' %}">
+
+
+        <h1>List of People</h1>
+
+
+
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Actions</th>
+        </tr>
+        {% for person in persons %}
+            <tr>
+                <td>{{person.name}}</td>
+                <td >
+                    <a id="button-edit" href="{% url 'edit' person.pk %}">Edit</a>
+                    <a id="button-view" href="{% url 'view' person.pk %}">View</a>
+                    <a id="button-delete" href="{% url 'delete' person.pk %}">Delete</a>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+
+<a class="button" href="{% url 'home' %}">Home</a>
+</body>
+</html>

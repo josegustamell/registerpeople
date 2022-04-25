@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,500&family=Roboto&display=swap');
+
+body {
+    margin: 0;
+    background-color: #92ada0;
+}
+
+.top {
+    width: 300px;
+    position: relative;
+    left: 545px;
+    margin-top: 18px;
+    margin-bottom: 25px;
+
+
+}
+
+.top h1{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 65px;
+    font-family: Lora;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: underline;
+
+    color: black;
+    margin: 2px;
+}
+
+.form {
+    border: 5px solid black;
+    border-radius: 20px;
+    position: absolute;
+    background: white;
+    left: 250px;
+    padding: 28px;
+
+}
+
+.label {
+    display: block;
+    color: black;
+    position: relative;
+    margin-top: 4px;
+    font-family: Didot;
+    font-weight: 500;
+    font-size: 25px;
+    padding: 5px;
+}
+
+#name-label {
+
+    font-family: Didot;
+    font-weight: 500;
+    font-size: 25px;
+}
+
+.form-box:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px white inset;
+}
+
+.form-box {
+    display: block;
+    padding: 5px;
+    background: none;
+    position: relative;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid black;
+    font-size: 18px;
+    color: black;
+    height: 16px;
+    width: 800px;
+    margin-top: 8px;
+    margin-bottom: 10px;
+
+}
+
+
+#name-box{
+    display: block;
+    padding: 5px;
+    background: none;
+    position: relative;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid black;
+    font-size: 20px;
+    color: black;
+    height: 16px;
+    width: 800px;
+    margin-top: 8px;
+    margin-bottom: 10px;
+
+}
+
+#button1, #button2 {
+    text-decoration: none;
+    border: 1px solid black;
+    background: white;
+    color: black;
+
+
+}
+
+#button1 {
+
+    font-family: Roboto;
+    font-style: bold;
+    font-size: 15px;
+    font-weight: 500;
+
+    border: 2px solid black;
+    border-radius: 10px;
+
+    padding: 12px 12px;
+
+    position: absolute;
+    bottom: 20px;
+    left: 270px;
+}
+
+#button2 {
+    font-family: Roboto;
+
+    font-size: 15px;
+    font-weight: 500;
+
+    border: 2px solid black;
+    border-radius: 10px;
+
+    height: 18px;
+    padding: 12px 12px;
+
+    position: absolute;
+    bottom: 20px;
+    left: 370px;
+}
+
+#button1:hover{
+    cursor: pointer;
+    border: 1px solid white;
+    background: black;
+    color: white;
+
+}
+
+#button2:hover{
+    cursor: pointer;
+    border: 1px solid white;
+    background: black;
+    color: white;
+
+}

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>View</title>
+</head>
+<body>
+
+  <h1>{{person.name}} {{person.lastname}}</h1>
+    <p>Age: {{person.age}}</p>
+    <p>Birth date: {{person.birth_date}}</p>
+    <p>Email: {{person.email}}</p>
+    <p>Nickname: {{person.nickname}}</p>
+    <p>Notes: {{person.note}}</p>
+
+<a href="{% url 'list' %}">List of people</a>
+<a href="{% url 'edit' person.pk %}">Edit</a>
+<a href="{% url 'delete' person.pk %}">Delete</a>
+</body>
+</html>

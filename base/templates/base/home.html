@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static '/css/home.css' %}">
+
+</head>
+<body>
+
+
+  <div class="top">
+        <h1>Register</h1>
+    </div>
+
+    <form action="" method="POST">
+        <div class="form">
+            {% csrf_token %}
+            <label id="name-label" >Name</label>
+            <p id="name-box">{{name_api}}</p>
+
+            {{form.name.as_hidden}}
+
+
+            <label class="label">Age</label>
+            {{form.age}} <!-- Eles tem a classe de form-box -->
+
+            <label class="label">Birth Date</label>
+            {{form.birth_date}}
+
+            <label class="label">Email</label>
+            {{form.email}}
+
+            <label class="label">Nickname</label>
+            {{form.nickname}}
+
+            <label class="label">Note</label>
+            {{form.note}}
+        </div>
+
+            <button id="button1" data-href-template="{% url 'list' %}">Register</button>
+            <a id="button2" href="{% url 'list' %}" role="button">Cancel</a>
+
+        </form>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Lora:ital@1&family=Roboto&display=swap');
+
+body {
+    margin: 0;
+    background-color: #92ada0;
+}
+
+
+h1 {
+    font-family: Lora;
+    text-align: center;
+    font-size: 65px;
+    font-weight: 700;
+    text-decoration: underline;
+    margin-top: 25px;
+
+}
+
+table {
+    position: absolute;
+    left: 185px;
+    background-color: white;
+    width: 1000px;
+    text-align: center;
+}
+
+
+table, th, td {
+    position: relative;
+    border: 2px solid black;
+    border-collapse: collapse;
+
+}
+
+
+th, td {
+    padding: 15px;
+
+}
+
+th {
+    font-family: Roboto;
+}
+
+td {
+    font-family: Lato;
+}
+
+.button {
+    text-decoration: none;
+    border: 1px solid black;
+    background: white;
+    color: black;
+
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 500;
+
+    border: 2px solid black;
+    border-radius: 10px;
+
+    height: 18px;
+    padding: 12px 12px;
+
+    position: relative;
+    top: 40px;
+    left: 193px;
+}
+
+#button-edit, #button-view, #button-delete {
+    text-decoration: underline;
+    color: black;
+    background-color: white;
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 500;
+
+    position: absolute;
+    top: 15px;
+}
+
+#button-edit {
+    position: absolute;
+    left: 18px;
+    font-size: 17px;
+}
+
+#button-view {
+    position: absolute;
+    left: 110px;
+    font-size: 17px;
+}
+
+#button-delete {
+
+    position: absolute;
+    left: 200px;
+    font-size: 17px;
+}
+
+#button-edit:hover, #button-view:hover, #button-delete:hover {
+    color: white;
+    background-color: black;
+    border-radius: 5px;
+    padding: 2px;
+    text-decoration: none
+}
+
+.button:hover {
+    background-color: black;
+    border: 1px solid white;
+    color: white;
+}
