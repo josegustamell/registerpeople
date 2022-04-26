@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital@1&display=swap');
+
+body {
+
+    background-color: #92ada0;
+}
+
+h1 {
+
+    font-size: 60px;
+    font-family: Lora;
+    font-weight: 700;
+    text-align: center;
+    color: black;
+    margin-top: 100px;
+}
+
+#button1, #button2 {
+    text-decoration: none;
+    border: 2px solid black;
+    background: white;
+    color: black;
+
+
+}
+
+#button1 {
+
+    font-family: Roboto;
+    font-style: bold;
+    font-size: 20px;
+    font-weight: 500;
+
+    padding: 8px 25px;
+
+    border: 2px solid black;
+    border-radius: 10px;
+
+    position: relative;
+    top: 60px;
+    left: 550px;
+
+
+}
+
+#button2 {
+    font-family: Roboto;
+    font-style: bold;
+    font-size: 20px;
+    font-weight: 500;
+
+    border: 2px solid black;
+    border-radius: 10px;
+
+    padding: 8px 12px;
+
+    position: relative;
+    top: 60px;
+    left: 600px;
+
+}
+
+#button1:hover {
+    cursor: pointer;
+    border: 2px solid white;
+    background: #638CB8;
+    color: white;
+
+}
+
+#button2:hover {
+    cursor: pointer;
+    border: 2px solid white;
+    background: #db3939;;
+    color: white;
+}

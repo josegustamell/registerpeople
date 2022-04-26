@@ -2,15 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Delete</title>
+    <title>CRUD</title>
 </head>
 <body>
 
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static '/css/delete.css' %}">
+
   <form method="post" action="">
-    {% csrf_token %}
-    <h2>Do you want to delete {{person.name}}?</h2>
-    <input type="submit" value="Yes">
-    <a href="{% url 'list' %}">No</a>
+        {% csrf_token %}
+        <h1>Do you want to delete {{person.name}}?</h1>
+
+        <input id="button1" type="submit" value="Yes">
+        <a id="button2" href="{% url 'list' %}">Cancel</a>
 
 
   </form>

@@ -2,19 +2,40 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>View</title>
+    <title>CRUD</title>
 </head>
 <body>
 
-  <h1>{{person.name}} {{person.lastname}}</h1>
-    <p>Age: {{person.age}}</p>
-    <p>Birth date: {{person.birth_date}}</p>
-    <p>Email: {{person.email}}</p>
-    <p>Nickname: {{person.nickname}}</p>
-    <p>Notes: {{person.note}}</p>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static '/css/view.css' %}">
 
-<a href="{% url 'list' %}">List of people</a>
-<a href="{% url 'edit' person.pk %}">Edit</a>
-<a href="{% url 'delete' person.pk %}">Delete</a>
+    <div class="container">
+
+        <h1>{{person.name}}</h1>
+
+        <label class="label">Age</label>
+        <p class="box">{{person.age}}</p>
+
+        <label class="label">Birth Date</label>
+        <p class="box">{{person.birth_date}}</p>
+
+        <label class="label">Email</label>
+        <p class="box">{{person.email}}</p>
+
+        {% if person.nickname == None %}
+        <label class="label">Nickname</label>
+        {% else %}
+            <label class="label">Nickname</label>
+            <p class="box">{{person.nickname}}</p>
+        {% endif %}
+
+        <label class="label">Notes</label>
+        <p class="box">{{person.note}}</p>
+
+    </div>
+
+<a id="button-home" href="{% url 'list' %}">List of people</a>
+<a id="button-edit" href="{% url 'edit' person.pk %}">Edit</a>
+<a id="button-delete" href="{% url 'delete' person.pk %}">Delete</a>
 </body>
 </html>

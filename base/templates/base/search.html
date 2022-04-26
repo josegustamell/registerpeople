@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CRUD</title>
+</head>
+<body>
+
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static '/css/search.css' %}">
+
+    <div class="top">
+        <h1>Search</h1>
+    </div>
+
+    <div>
+        {% for person in person %}
+            {% if person.name %}
+                <table>
+                    <tr>
+                        <td>
+                            <a id="button-view" href="{% url 'view' person.pk %}">{{person.name}}</a>
+                            <a id="button-edit" href="{% url 'edit' person.pk %}">Edit</a>
+                            <a id="button-delete" href="{% url 'delete' person.pk %}">Delete</a>
+                        </td>
+                    </tr>
+                </table>
+            {% endif %}
+        {% endfor %}
+    </div>
+
+    <a id="button1" href="{% url 'home' %}" role="button">Home</a>
+    <a id="button2" href="{% url 'list' %}" role="button">List</a>
+
+</body>
+</html>

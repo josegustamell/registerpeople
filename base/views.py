@@ -2,8 +2,7 @@ from django.shortcuts import render, redirect
 from .models import Person
 from .forms import PersonForm
 import requests
-from django.contrib.auth import login, logout, authenticate
-
+from django.db.models import Q
 
 def register(request):
     url = requests.get('https://gerador-nomes.herokuapp.com/nome/aleatorio')
@@ -27,6 +26,17 @@ def listPerson(request):
 
     context = {'persons': persons}
     return render(request, 'base/list.html', context)
+
+
+def searchPerson(request):
+    query = request.GET.get('q')
+    query_set = Person.objects.all()
+    if query is not None:
+        lookups = Q(name__icontains=query)
+        query_set = Person.objects.filter(lookups)
+
+    context = {'person': query_set}
+    return render(request, 'base/search.html', context)
 
 
 def viewPerson(request, pk):

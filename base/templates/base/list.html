@@ -2,7 +2,7 @@
 <html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
-    <title>Home</title>
+    <title>CRUD</title>
 </head>
 <body>
 
@@ -12,21 +12,25 @@
 
         <h1>List of People</h1>
 
-
+    <div>
+        <form method="GET" action="{% url 'search' %}">
+            <input class="search-box" type="text" name="q">
+            <input id="button-submit" type="submit">
+        </form>
+    </div>
 
     <table>
         <tr>
-            <th>Name</th>
-            <th>Actions</th>
+            <th>Names</th>
         </tr>
         {% for person in persons %}
             <tr>
-                <td>{{person.name}}</td>
-                <td >
+                <td>
+                    <a id="button-view" href="{% url 'view' person.pk %}">{{person.name}}</a>
                     <a id="button-edit" href="{% url 'edit' person.pk %}">Edit</a>
-                    <a id="button-view" href="{% url 'view' person.pk %}">View</a>
                     <a id="button-delete" href="{% url 'delete' person.pk %}">Delete</a>
                 </td>
+
             </tr>
         {% endfor %}
     </table>

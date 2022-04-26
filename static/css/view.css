@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital@1&family=Quicksand:wght@500&family=Roboto:wght@300&display=swap');
+
+body {
+    margin: 13px;
+    background-color: #92ada0;
+}
+
+h1 {
+    font-family: Lora;
+    text-decoration: underline;
+}
+
+.container {
+    border: 5px solid black;
+    border-radius: 20px;
+    position: absolute;
+    left: 250px;
+    background: white;
+    text-align: center;
+    width: 500px;
+    height: 700px;
+    padding: 30px;
+
+}
+
+.label {
+    display: block;
+    color: black;
+    position: relative;
+    margin-top: 4px;
+    font-family: Quicksand;
+
+    font-size: 25px;
+    padding: 5px;
+
+}
+
+.box {
+    display: block;
+    color: black;
+    position: relative;
+    margin-top: 4px;
+    font-family: Quicksand;
+
+    font-size: 20px;
+    padding: 5px;
+
+}
+
+#button-edit, #button-delete {
+    text-decoration: none;
+    color: white;
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 500;
+
+    border-radius: 8px;
+}
+
+
+
+#button-home {
+    background-color: white;
+
+    padding: 20px;;
+    text-decoration: none;
+    color: black;
+
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 500;
+
+    border: 1px solid black;
+    border-radius: 8px;
+
+    position: absolute;
+    bottom: 30px;
+    right: 300px;
+
+}
+
+#button-edit {
+    background-color: #638CB8;
+    position: absolute;
+    top: 100px;
+    right: 300px;
+    font-size: 20px;
+    padding: 21px 74px;
+
+}
+
+#button-delete {
+    padding: 5px;
+    background-color: #db3939;
+    position: absolute;
+
+    top: 200px;
+    right: 300px;
+    font-size: 20px;
+    padding: 21px 64px;
+}
+
+#button-home:hover, #button-edit:hover, #button-delete:hover {
+    border: 2px solid black;
+
+
+}
