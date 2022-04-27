@@ -80,7 +80,7 @@ body {
 }
 
 #button1 {
-
+    background-color: #638CB8;
     font-family: Roboto;
     font-style: bold;
     font-size: 15px;
@@ -98,7 +98,7 @@ body {
 
 #button2 {
     font-family: Roboto;
-
+    background-color: #db3939;
     font-size: 15px;
     font-weight: 500;
 
